@@ -1,0 +1,30 @@
+plugins {
+    id 'java' // or 'groovy' Must be explicitly applied
+    id 'com.github.johnrengelman.shadow' version '1.2.0'
+    id 'application'
+}
+
+mainClassName = "Server"
+jar.manifest.attributes("Main-Class" : mainClassName)
+
+
+sourceCompatibility= 1.8
+
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven{
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+dependencies {
+    compile "com.sparkjava:spark-core:2.1"
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2'
+}

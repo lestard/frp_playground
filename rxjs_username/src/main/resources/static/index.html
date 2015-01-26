@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="de">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8" />
+
+    <title>Username Example</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <script src="./jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.async.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.coincidence.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.binding.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.time.js"></script>
+    <script src="./rx.dom.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/rxjs-jquery/1.1.6/rx.jquery.js"></script>
+
+</head>
+<body>
+<div class="container">
+
+<h1>RxJS Username Beispiel</h1>
+
+
+<h3>Registrierung</h3>
+<p>
+    Username:
+    <input id="username" type="text"/>
+    <span id="ok" class="glyphicon glyphicon-ok" aria-hidden="true"> Noch frei</span>
+    <span id="notOk" class="glyphicon glyphicon-remove" aria-hidden="true"> Bereits vergeben</span>
+</p>
+
+
+<p>Dieses Beispiel simuliert ein Nutzernamen-Eingabefeld eines Registrierungsformulars einer Webanwendung.
+Zur Registrierung darf der Nutzername im System noch nicht vergeben sein. Dazu wird während des Tippens ein
+REST-Webservice angerufen, um die Verfügbarkeit des aktuell eingegeben Wertes zu prüfen.</p>
+
+<p>Zum Testen wurden im Server u.a. die am häufigsten in Deutschland vergebenen Vornamen bereits "registriert".
+Werden diese Namen eingetippt, erscheint eine Meldung, dass der Name bereits vergeben ist.</p>
+
+<p>Einige bereits vergebene Nutzernamen zum Testen:</p>
+<ul>
+    <li>tester</li>
+    <li>testuser</li>
+    <li>sophie</li>
+    <li>marie</li>
+    <li>emma</li>
+    <li>anna</li>
+    <li>paul</li>
+    <li>alexander</li>
+    <li>ben</li>
+    <li>leon</li>
+    <li>lukas</li>
+</ul>
+
+    <p>Inspiriert wurde diese Beispiel durch den Vortrag "The enemy of the state" von <strong>Philip Roberts</strong>.
+        Dieser Vortrag kann hier angeschaut werden: <a href="http://vimeo.com/68987289">vimeo.com/68987289</a>.</p>
+    <p>
+    Die Anwendung in diesem Vortrag wurde jedoch mit <a href="https://baconjs.github.io/">Bacon.js</a> implementiert,
+        während das hier vorliegende Beispiel mit <a href="https://github.com/Reactive-Extensions/RxJS">RxJS</a> umgesetzt wurde.</p>
+
+</div>
+
+<script src="./app.js"></script>
+
+</body>
+</html>
